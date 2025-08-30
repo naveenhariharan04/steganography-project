@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url("../images/embed-bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;   /* center horizontally */
+    align-items: center;       /* center vertically */
+    min-height: 100vh;         /* full screen */
+    margin: 0;
+}
+
+/* Container with fade-in */
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(20, 20, 20, 0.12);   /* only 12% dark overlay */
+    backdrop-filter: blur(10px);          /* lighter blur, so bg shows more */
+    -webkit-backdrop-filter: blur(10px);  /* Safari support */
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); /* softer shadow */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #fff;
+    height: auto;
+    text-align: center;
+
+    /* fade-in effect */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Neon glow buttons */
+.button {
+    width: 100%;
+    background: linear-gradient(135deg, #263899, #9605ff);
+    color: #fbfbfb;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.button:hover {
+    box-shadow: 0 0 15px rgb(139 20 136 / 30%), 0 0 30px #6234b5;
+    transform: scale(1.05);
+}
+
+
+/* Titles and labels */
+.title {
+    font-size: 1.rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+    text-align: center;
+    color: #ffffffba; /* white text for readability */
+}
+.label {
+    margin-bottom: 5px;
+    color: #fff4f4cc;
+}
+
+/* Inputs */
+.input-file, .input-text, .input-password {
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    padding: 8px;
+    border: 1px solid #f7f7f7;
+    background: rgb(0 0 0 / 33%);
+    color: #ffffff;
+}
+.input-password {
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: rgba(0, 0, 0, 0.4); /* darker background so text is visible */
+    color: #ffffff;  /* 🔥 main text color */
+    font-size: 1rem;
+}
+
+/* Placeholder color */
+.input-password::placeholder {
+    color: #dddddd;  /* light gray for placeholder */
+    opacity: 1;      /* ensures it shows */
+}
+
+/* On focus (glow effect) */
+.input-password:focus {
+    outline: none;
+    border: 1px solid #8a2be2; /* purple glow */
+    box-shadow: 0 0 8px #8a2be2;
+}
+
+/* Buttons */
+.button {
+    width: 100%;
+    background-color: #6234b5;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button:hover {
+    background-color: #3cc386;
+}
+
+/* Status message */
+.status-message {
+    font-size: 0.875rem;
+    margin-top: 12px;
+    color: #ffffff;
+}
+
+/* Download link */
+.download-link {
+    display: none;
+    margin-top: 16px;
+    background-color: #01a35a;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Home link */
+.home-link {
+    display: block;
+    margin-top: 34px;
+    text-align: center;
+    color: #ff0101;
+    text-decoration: none;
+}
